@@ -6,7 +6,7 @@ using namespace std;
 
 vector<vector<int> > leeMatriz(const string &nombreArchivo);
 ostream &operator<<(ostream &o, const vector<int> &v);
-ostream &operator<<(ostream &o, const vector<vector<int>> &matriz);
+ostream &operator<<(ostream &o, const vector<vector<int> > &matriz);
 
 int main()
 {
@@ -49,9 +49,9 @@ ostream &operator<<(ostream &o, const vector<int> &v)
     return o;
 }
 
-ostream &operator<<(ostream &o, const vector<vector<int>> &matriz)
+ostream &operator<<(ostream &o, const vector<vector<int> > &matriz)
 {
-   vector<int>::const_iterator i;
+   vector<vector<int> >::const_iterator i;
    for(i = matriz.begin(); i != matriz.end(); ++i)
        o << *i << endl;
    return o << endl;
